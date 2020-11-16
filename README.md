@@ -15,6 +15,12 @@ Screenshots
 
 ![Dashboard](doc/assets/dashboard.png)
 
+![Browse](doc/assets/browse.png)
+
+![Calendar](doc/assets/calendar_event_edit.png)
+
+![Projects](doc/assets/projects_task_edit.png)
+
 Installation
 ------------
 
