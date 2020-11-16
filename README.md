@@ -10,6 +10,11 @@ At its core, _Soliloquy_ is essentially a ledger, consisting of generic _entries
 
 _Soliloquy_ is a web application that currently can only be used in a web browser (an Electron-based desktop application will hopefully come in the near future), and relies on a [backend](https://github.com/Shampooing/soliloquy-server) to read and write into the ledger.
 
+Screenshots
+-----------
+
+![Dashboard](doc/assets/dashboard.png)
+
 Installation
 ------------
 
