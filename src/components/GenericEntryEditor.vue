@@ -206,31 +206,29 @@ export default {
   },
   methods: {
     editor_set_content: function (raw_content) {
-      console.log(raw_content)
+      if (!raw_content) {
+        return
+      }
       let content;
       try {
         content = JSON.parse(raw_content);
       } catch (err) {
         console.info("This is an old-style entry ! Save it now to convert it to a new-style (rich) entry.");
-        // tiptap does not allow empty strings
         content = {
           "type": "doc",
           "content": [
             {
               "type": "paragraph",
-            }
-          ]
-        }
-        if (raw_content) {
-          content["content"][0]["content"] = [
-            {
-              "type": "text",
-              "text": raw_content
+              "content": [
+                {
+                  "type": "text",
+                  "text": raw_content
+                }
+              ],
             }
           ]
         }
       }
-      // console.log(content)
       this.rich_editor.setContent(content);
     },
     create_reference_from_drag_drop: function (event) {
@@ -272,7 +270,6 @@ export default {
             this.new_entry_state.resourcetype,
             this.new_entry_state.name
         );
-        console.log("i emitted an 'entry-save' event");
       });
       // this.references_updates.map(function(reference) {
       //   this.$store.dispatch("update_request"), reference;
