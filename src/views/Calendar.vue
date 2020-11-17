@@ -229,7 +229,7 @@
         let event = {
           ...time_info,
           client: this.this_client["id"],
-          creation_date: new Date().toISOString(),
+          creation_date: moment().format(),
           id: 1, // TODO use a proper counter here
           name: "Untitled Event",
           content: "",

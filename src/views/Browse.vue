@@ -225,7 +225,7 @@
             create_entry: function (entry_type, referenced_by) {
                 let entry = {
                     client: this.this_client["id"],
-                    creation_date: new Date().toISOString(),
+                    creation_date: moment().format(),
                     id: 1, // TODO use a proper counter here
                     name: "Untitled " + entry_type,
                     content: "",
