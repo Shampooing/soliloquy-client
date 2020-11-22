@@ -104,7 +104,7 @@
 
             <v-col class="mr-3 mb-0 overflow-y-auto">
                 <v-card v-if="open_entries.length > 0">
-                    <v-tabs v-model="active_tab" background-color="primary" center-active>
+                    <v-tabs v-model="active_tab" background-color="blue-grey lighten-5" center-active slider-size="1">
                         <v-tab
                                 v-for="opened_entry_index in open_entries"
                                 :key="opened_entry_index"
@@ -112,14 +112,17 @@
                                 @click.middle.stop="close_entry(opened_entry_index)"
                                 class="pr-1"
                         >
-                            {{ entries[opened_entry_index].name.substring(0, 25) + ((entries[opened_entry_index].name.length > 25) ? "..." : "") }}
+                            <v-chip :color="entry_color(entries[opened_entry_index])" small class="disable-events font-weight-regular" label>
+                              {{ entries[opened_entry_index].name.substring(0, 25) + ((entries[opened_entry_index].name.length > 25) ? "..." : "") }}
+                            </v-chip>
+
                             <v-btn
                                     icon
                                     x-small
                                     class="ml-2"
                                     @click.stop="close_entry(opened_entry_index)"
                             >
-                                <v-icon>
+                                <v-icon small>
                                     mdi-close
                                 </v-icon>
                             </v-btn>
