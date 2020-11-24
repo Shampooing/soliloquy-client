@@ -4,7 +4,7 @@ soliloquy-client
 _Soliloquy_ is a free application to create and review notes, tasks, and calendar events, in a single consolidated space. It aims at bringing together two sets of  features that so far have mainly been addressed by distinct pieces of software:
 
 * On one hand, a consolidated space to manage notes, projects, and calendars, among other things. This has roughly been the offering of applications such as [Notion](https://www.notion.so/) or [Coda](https://coda.io/);
-* On the other, _Bidirectional linking_, in the sense that entries are able to reference each other, and are aware of which entries reference them. This is a core feature of applications such as [Roam Research](https://roamresearch.com/) or [Obsidian](https://obsidian.md/).
+* On the other, _Bidirectional linking_, in the sense that entries are able to reference each other, and are aware of which entries reference them. This is a core feature of applications such as [Roam Research](https://roamresearch.com/) or [Obsidian](https://obsidian.md/), and more generally a pillar of the [Zettelkasten](https://en.wikipedia.org/wiki/Zettelkasten) method.
 
 At its core, _Soliloquy_ is essentially a logbook, consisting of generic _entries_ recorded over time by the user, and the relationships (_references_) linking them. More precisely, specialized versions of _entries_ are used to represent notes, tasks, and events, as well as their corresponding containers (notebooks, projects, and sagas respectively), and _references_ can link any two _entries_ together.
 
